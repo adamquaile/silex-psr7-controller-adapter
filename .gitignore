@@ -6,3 +6,6 @@
 
 # Vendor dir
 /vendor/
+
+# Composer.lock
+/composer.lock
