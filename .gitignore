@@ -1,0 +1,8 @@
+# Test reports
+/build/
+
+# IDE dirs
+/.idea/
+
+# Vendor dir
+/vendor/

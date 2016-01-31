@@ -1,0 +1,31 @@
+{
+    "name": "voidcontext/silex-psr7-adapter",
+    "description": "PSR-7 message adapter for Silex",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabor Pihaj",
+            "email": "gabor.pihaj@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "psr/http-message": "^1.0",
+        "symfony/psr-http-message-bridge": "^0.2.0",
+        "zendframework/zend-diactoros": "^1.3",
+        "silex/silex": "~1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SilexPsr7\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SilexPsr7Test\\": "test"
+        }
+    }
+}
