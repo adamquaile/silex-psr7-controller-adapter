@@ -1,6 +1,7 @@
 {
-    "name": "voidcontext/silex-psr7-adapter",
-    "description": "PSR-7 message adapter for Silex",
+    "name": "voidcontext/silex-psr7-controller-adapter",
+    "description": "PSR-7 controller adapter for Silex",
+    "keywords": [ "Silex", "PSR-7", "psr7", "Controller", "Adapter", "HTTP", "HTTP message"],
     "license": "MIT",
     "authors": [
         {
