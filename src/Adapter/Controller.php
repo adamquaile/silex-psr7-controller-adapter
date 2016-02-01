@@ -33,8 +33,13 @@ class Controller
     public function createController($controller)
     {
         return function (Request $request) use ($controller) {
-            $arguments = $this->controllerResolver->getArguments($request, $controller);
-            $psr7Response = call_user_func_array($controller, $arguments);
+            $fakeRequest = Request::create($request->getUri());
+            $fakeRequest->attributes->set('_controller', $controller);
+
+            $callableController = $this->controllerResolver->getController($fakeRequest);
+            $arguments = $this->controllerResolver->getArguments($request, $callableController);
+
+            $psr7Response = call_user_func_array($callableController, $arguments);
 
             return $this->httpFoundationFactory->createResponse($psr7Response);
         };
