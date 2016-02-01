@@ -49,7 +49,7 @@ class ControllerTest extends PHPUnit_Framework_TestCase
         $app = new Application();
 
         $adapter = new Controller($app);
-        $wrappedCallback = $adapter->createController(DummyController::class . "::testAction");
+        $wrappedCallback = $adapter->createController("SilexPsr7Test\\Lib\\DummyController::testAction");
 
         $request = Request::create('http://example.com/');
 
