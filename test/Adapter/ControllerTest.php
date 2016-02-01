@@ -27,7 +27,7 @@ class ControllerTest extends PHPUnit_Framework_TestCase
 
         $result = $wrappedCallback($request);
 
-        $this->assertInstanceOf(Response::class, $result);
+        $this->assertInstanceOf("Symfony\\Component\\HttpFoundation\\Response", $result);
     }
 
     public function testClass()
@@ -41,7 +41,7 @@ class ControllerTest extends PHPUnit_Framework_TestCase
 
         $result = $wrappedCallback($request);
 
-        $this->assertInstanceOf(Response::class, $result);
+        $this->assertInstanceOf("Symfony\\Component\\HttpFoundation\\Response", $result);
     }
 
     public function testString()
@@ -55,7 +55,7 @@ class ControllerTest extends PHPUnit_Framework_TestCase
 
         $result = $wrappedCallback($request);
 
-        $this->assertInstanceOf(Response::class, $result);
+        $this->assertInstanceOf("Symfony\\Component\\HttpFoundation\\Response", $result);
     }
 
     public function testArray()
@@ -70,6 +70,6 @@ class ControllerTest extends PHPUnit_Framework_TestCase
 
         $result = $wrappedCallback($request);
 
-        $this->assertInstanceOf(Response::class, $result);
+        $this->assertInstanceOf("Symfony\\Component\\HttpFoundation\\Response", $result);
     }
 }
